@@ -3,17 +3,24 @@
     margin: 0;
 }
 header{
-    background-color: #a6a6a6;
+    background-color: rgb(166, 166, 166);
     height: 80px;
     width:100%;
-    position: relative;
+    position: fixed;
+
 }
 h1{color: white;
     position: absolute;
-    left: 120px;
+    /*left: 120px;*/
     top: 0;
     line-height: 80px;
-    background-image: url("")}
+    background-image: url("imgs/logo.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    left:10px;
+    width:450px;
+    text-indent: -9999px;
+}
 header ul{
     position: absolute;
     right: 5vw;
@@ -28,4 +35,8 @@ header a{
     text-decoration: none;}
 header a:hover{
     text-decoration: underline;
+}
+.news{
+    background-color: white;
+
 }
