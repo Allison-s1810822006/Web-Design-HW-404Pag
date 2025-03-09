@@ -107,7 +107,7 @@ footer
         width: 150%;
         height: 50vh;
         background-size: 35%;
-        background-position: center;
+        background-position:left center;
         /*width:700px;*/
         display: flex;
     }
@@ -120,7 +120,7 @@ footer
     }
     /*footer的內容*/
     footer{
-        font-size: 16px;
+        font-size: 14px;
     }
     /*小載體的漢堡選單設定*/
     .menu{
@@ -130,7 +130,7 @@ footer
         font-size: 35px;
         position: absolute;
         top: 15px;
-        left: 20px;
+        right: 20px;
         border: none;
         cursor: pointer;
     }
