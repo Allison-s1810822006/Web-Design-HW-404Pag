@@ -17,7 +17,7 @@ h1{color: white;
     background-image: url("imgs/logo.png");
     background-repeat: no-repeat;
     background-position: left center;
-    left:10px;
+    left:60px;
     width:450px;
     text-indent: -9999px;
 }
@@ -38,5 +38,43 @@ header a:hover{
 }
 .news{
     background-color: white;
+    color: #737373;
+    height: 80vh;
+    background-image: url("imgs/Cat.png");
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: center;
+    width:1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Error{
+    background-color: white;
+    color: #737373;
+    height: 250px;
 
+}
+.Error h2{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+.Error p{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    line-height: 1.5em;
+}
+footer
+{
+    background-color: black;
+    color: white;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.5em;
 }
