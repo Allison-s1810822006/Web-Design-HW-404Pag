@@ -41,12 +41,14 @@ header a{
 header a:hover{
     text-decoration: underline;
 }
+/*main 第一個<section class="news">*/
 .news{
     background-color: white;
     color: #737373;
     height: 80vh;
     background-image: url("imgs/Cat.png");
     background-repeat: no-repeat;
+    /*縮小貓咪圖片30%*/
     background-size: 30%;
     background-position: center;
     width:1200px;
@@ -55,6 +57,7 @@ header a:hover{
     align-items: center;
     justify-content: center;
 }
+/*main 第二個<section class="Error">*/
 .Error{
     font-family: "Arial", sans-serif;
     background-color: white;
@@ -94,21 +97,32 @@ footer
 @media screen and (max-width: 760px){
     header ul{
         display: none;
-        right: 50%;
-        transform: translateX(-50%);
+        /*left: 50%;*/
+        background-position: right center;
+        background-size: auto 100%;
+        transform: translatex(-50%);
     }
+    /*main第一個 <section class="news">*/
     .news{
-        width: 75%;
+        width: 150%;
+        height: 50vh;
+        background-size: 35%;
+        background-position: center;
+        /*width:700px;*/
+        display: flex;
     }
+    /*main 第二個<section class="Error">*/
     .Error h2{
-        font-size: 50px;
+        font-size: 40px;
     }
     .Error p{
         font-size: 20px;
     }
+    /*footer的內容*/
     footer{
         font-size: 16px;
     }
+    /*小載體的漢堡選單設定*/
     .menu{
         display: block;
         background-color: transparent;
