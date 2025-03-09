@@ -24,7 +24,6 @@ h1{color: white;
     text-indent: -9999px;
 }
 header ul{
-
     position: absolute;
     right: 5vw;
     top: 0;
@@ -94,12 +93,15 @@ footer
     display: none;
 }
 /*響應式語法*/
-@media screen and (max-width: 760px){
+@media screen and (max-width: 800px){
+   .h1{
+       background-position: 80%center;
+         width: 100px;
+            right: 10px;
+   }
     header ul{
         display: none;
-        /*left: 50%;*/
-        background-position: right center;
-        background-size: auto 100%;
+        left: 50%;
         transform: translatex(-50%);
     }
     /*main第一個 <section class="news">*/
@@ -107,7 +109,8 @@ footer
         width: 150%;
         height: 50vh;
         background-size: 35%;
-        background-position:center;
+        /*讓貓咪圖片往左邊靠20% 往下面靠100%*/
+        background-position:20% 100% ;
         /*width:700px;*/
         display: flex;
     }
