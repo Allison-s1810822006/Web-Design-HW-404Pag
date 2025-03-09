@@ -17,20 +17,25 @@ h1{color: white;
     background-image: url("imgs/logo.png");
     background-repeat: no-repeat;
     background-position: left center;
+    /*縮小LOGO圖片50%*/
+    background-size:50% ;
     left:60px;
     width:450px;
     text-indent: -9999px;
 }
 header ul{
+
     position: absolute;
     right: 5vw;
     top: 0;
     line-height: 80px;
 }
 header li{
+
     display: inline;
     margin-right: 4vw;}
 header a{
+    font-family: "Arial", sans-serif;
     color: white;
     text-decoration: none;}
 header a:hover{
@@ -51,17 +56,20 @@ header a:hover{
     justify-content: center;
 }
 .Error{
+    font-family: "Arial", sans-serif;
     background-color: white;
     color: #737373;
     height: 250px;
 
 }
 .Error h2{
+    font-family: "Arial", sans-serif;
     font-size: 30px;
     display: flex;
     justify-content: center;
 }
 .Error p{
+    font-family: "Arial", sans-serif;
     font-size: 20px;
     display: flex;
     justify-content: center;
@@ -69,6 +77,7 @@ header a:hover{
 }
 footer
 {
+    font-family: "Arial", sans-serif;
     background-color: black;
     color: white;
     height: 60px;
@@ -85,20 +94,20 @@ footer
 @media screen and (max-width: 760px){
     header ul{
         display: none;
-        left: 50%;
+        right: 50%;
         transform: translateX(-50%);
     }
     .news{
-        width: 100%;
+        width: 75%;
     }
     .Error h2{
-        font-size: 20px;
+        font-size: 50px;
     }
     .Error p{
-        font-size: 14px;
+        font-size: 20px;
     }
     footer{
-        font-size: 12px;
+        font-size: 16px;
     }
     .menu{
         display: block;
