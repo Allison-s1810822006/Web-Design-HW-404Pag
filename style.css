@@ -3,7 +3,7 @@
     margin: 0;
 }
 header{
-    background-color: rgb(166, 166, 166);
+    background-color: rgb(166, 166, 166 ,0.9);
     height: 80px;
     width:100%;
     position: fixed;
@@ -13,7 +13,7 @@ h1{color: white;
     position: absolute;
     /*left: 120px;*/
     top: 0;
-    line-height: 80px;
+    line-height: 95px;
     background-image: url("imgs/logo.png");
     background-repeat: no-repeat;
     background-position: left center;
@@ -77,4 +77,39 @@ footer
     align-items: center;
     font-size: 14px;
     line-height: 1.5em;
+}
+.menu{
+    display: none;
+}
+/*響應式語法*/
+@media screen and (max-width: 760px){
+    header ul{
+        display: none;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .news{
+        width: 100%;
+    }
+    .Error h2{
+        font-size: 20px;
+    }
+    .Error p{
+        font-size: 14px;
+    }
+    footer{
+        font-size: 12px;
+    }
+    .menu{
+        display: block;
+        background-color: transparent;
+        color: white;
+        font-size: 35px;
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        border: none;
+        cursor: pointer;
+    }
+
 }
