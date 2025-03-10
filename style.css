@@ -1,95 +1,94 @@
-*{ /* 全局選擇器，設置所有元素的內外邊距為0 */
+* { /* 全局選擇器，設置所有元素的內外邊距為0 */
     padding: 0;
     margin: 0;
 }
 body { /* 設置body元素的樣式 */
     overflow-x: hidden; /* 隱藏水平滾動條 */
 }
-header {
-    background-color: rgb(166, 166, 166 ,0.9);
-    height: 80px;
-    width: 100%;
-    position: fixed; /* 確保 header 固定在最上層 */
-    z-index: 1000; /* 設定比 .news 更高的圖層 */
+header { /* 設置header元素的樣式 */
+    background-color: rgb(166, 166, 166, 0.9); /* 背景顏色和透明度 */
+    height: 80px; /* 高度 */
+    width: 100%; /* 寬度 */
+    position: fixed; /* 固定位置 */
+    z-index: 1000; /* 確保header在其他元素之上 */
 }
-h1{ /* 設置h1元素的樣式 */
+h1 { /* 設置h1元素的樣式 */
     color: white; /* 字體顏色 */
     position: absolute; /* 絕對定位 */
     top: 0; /* 距離頂部0 */
     line-height: 95px; /* 行高 */
     background-image: url("imgs/LOGO.png"); /* 背景圖片 */
-    background-repeat: no-repeat; /* LOGO圖片不重複 */
-    background-position: left center; /* LOGO圖片位置 */
-    background-size:50% ; /* LOGO圖片縮小50% */
-    left:60px; /* 距離左邊60px */
-    width:450px; /* 寬度 */
-    text-indent: -9999px; /* 隱藏原本打的one two studio文字 */
+    background-repeat: no-repeat; /* 背景圖片不重複 */
+    background-position: left center; /* 背景圖片位置 */
+    background-size: 50%; /* 背景圖片縮小50% */
+    left: 60px; /* 距離左邊60px */
+    width: 450px; /* 寬度 */
+    text-indent: -9999px; /* 隱藏文字 */
 }
-header ul{ /* 設置header內ul元素的樣式 */
+header ul { /* 設置header內ul元素的樣式 */
     position: absolute; /* 絕對定位 */
     right: 5vw; /* 距離右邊5vw */
     top: 0; /* 距離頂部0 */
     line-height: 80px; /* 行高 */
 }
-header li{ /* 設置header內li元素的樣式 */
+header li { /* 設置header內li元素的樣式 */
     display: inline; /* 行內顯示 */
     margin-right: 4vw; /* 右邊距4vw */
 }
-header a{ /* 設置header內a元素的樣式 */
+header a { /* 設置header內a元素的樣式 */
     font-family: "Arial", sans-serif; /* 字體 */
     color: white; /* 字體顏色 */
     text-decoration: none; /* 去掉下劃線 */
 }
-header a:hover{ /* 設置header內a元素的懸停樣式 */
-    text-decoration: underline; /* 讓使用者滑動時懸停時顯示下劃線 */
+header a:hover { /* 設置header內a元素的懸停樣式 */
+    text-decoration: underline; /* 懸停時顯示下劃線 */
 }
-.news {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 75vh;
-    position: relative; /* 避免影響 header 的層級 */
-    z-index: 10; /* 確保不超過 header */
+.news { /* 設置news類的樣式 */
+    display: flex; /* 彈性佈局 */
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+    height: 75vh; /* 高度 */
+    position: relative; /* 相對定位 */
+    z-index: 10; /* 確保不超過header */
 }
-
-.container {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 10px;
-    width: 300px;
-    height: 200px;
-    z-index: 5; /* 確保低於 header */
+.container { /* 設置container類的樣式 */
+    position: relative; /* 相對定位 */
+    display: flex; /* 彈性佈局 */
+    align-items: flex-end; /* 垂直底部對齊 */
+    justify-content: center; /* 水平置中 */
+    gap: 10px; /* 元素間距 */
+    width: 300px; /* 寬度 */
+    height: 200px; /* 高度 */
+    z-index: 5; /* 確保低於header */
 }
 .cat { /* 設置cat類的樣式 */
     width: 250px; /* 寬度 */
     position: relative; /* 相對定位 */
 }
-.coffee {
-    width: 210px;  /* 確保咖啡杯的大小 */
+.coffee { /* 設置coffee類的樣式 */
+    width: 210px; /* 寬度 */
     height: auto; /* 保持原比例 */
-    max-width: 100px;
-    position: relative;
-    margin-left: -20px;
-    transition: transform 0.5s ease;
+    max-width: 100px; /* 最大寬度 */
+    position: relative; /* 相對定位 */
+    margin-left: -20px; /* 左邊距-20px */
+    transition: transform 0.5s ease; /* 變換過渡效果 */
 }
 .container:hover .coffee { /* 設置container懸停時coffee類的樣式 */
     transform: rotate(30deg) translateX(20px); /* 旋轉和水平移動 */
 }
-.Error{ /* 設置Error類的樣式 */
+.Error { /* 設置Error類的樣式 */
     font-family: "Arial", sans-serif; /* 字體 */
     background-color: white; /* 背景顏色 */
     color: #737373; /* 字體顏色 */
     height: 200px; /* 高度 */
-    margin-top: -100px; /* 向上移動 100px */
+    margin-top: -100px; /* 向上移動100px */
 }
-.Error h2{ /* 設置Error內h2元素的樣式 */
+.Error h2 { /* 設置Error內h2元素的樣式 */
     font-size: 3rem; /* 字體大小 */
     display: flex; /* 彈性佈局 */
     justify-content: center; /* 水平置中 */
 }
-.Error p{ /* 設置Error內p元素的樣式 */
+.Error p { /* 設置Error內p元素的樣式 */
     font-size: 1.5rem; /* 字體大小 */
     display: flex; /* 彈性佈局 */
     justify-content: center; /* 水平置中 */
@@ -110,91 +109,88 @@ footer { /* 設置footer元素的樣式 */
     padding: 20px; /* 內邊距 */
     position: relative; /* 相對定位 */
 }
-.menu{ /* 設置menu類的樣式 */
+.menu { /* 設置menu類的樣式 */
     display: none; /* 不顯示 */
 }
-/*響應式程式碼*/
-@media screen and (max-width: 800px){
-    h1 {
-        background-size: contain; /* 確保 LOGO 完整顯示 */
-        background-position: center; /* 讓 LOGO 置中 */
-        width: 200px; /* 限制 LOGO 寬度 */
-        height: 50px; /* 限制 LOGO 高度 */
-        left: 10px; /* 避免跑出螢幕 */
+@media screen and (max-width: 800px) { /* 響應式設計，屏幕寬度小於800px時 */
+    h1 { /* 設置h1元素的樣式 */
+        background-size: contain; /* 確保背景圖片完整顯示 */
+        background-position: center; /* 背景圖片置中 */
+        width: 200px; /* 寬度 */
+        height: 50px; /* 高度 */
+        left: 10px; /* 距離左邊10px */
         text-indent: -9999px; /* 隱藏文字 */
     }
-    header ul{
-        display: none;
-        left: 50%;
-        transform: translatex(-50%);
+    header ul { /* 設置header內ul元素的樣式 */
+        display: none; /* 不顯示 */
+        left: 50%; /* 距離左邊50% */
+        transform: translateX(-50%); /* 水平移動 */
     }
-    /*main第一個 <section class="news">*/
-    .news{
-        width: 150%;
-        height: 50vh;
+    .news { /* 設置news類的樣式 */
+        width: 150%; /* 寬度 */
+        height: 50vh; /* 高度 */
     }
-    .container{
-        width: 50%;
-        height: 30%;
-        left: -14%;
-        justify-content: center;
+    .container { /* 設置container類的樣式 */
+        width: 50%; /* 寬度 */
+        height: 30%; /* 高度 */
+        left: -14%; /* 左邊距-14% */
+        justify-content: center; /* 水平置中 */
     }
-    .cat{
-        width: 50%;
-        position: relative;
+    .cat { /* 設置cat類的樣式 */
+        width: 50%; /* 寬度 */
+        position: relative; /* 相對定位 */
     }
-    .coffee{
-        width: 20%;
-        height: auto;
-        max-width: 100px;
-        position: relative;
-        margin-left: -20px;
-        transition: transform 0.5s ease;
+    .coffee { /* 設置coffee類的樣式 */
+        width: 20%; /* 寬度 */
+        height: auto; /* 保持原比例 */
+        max-width: 100px; /* 最大寬度 */
+        position: relative; /* 相對定位 */
+        margin-left: -20px; /* 左邊距-20px */
+        transition: transform 0.5s ease; /* 變換過渡效果 */
     }
-    /*main 第二個<section class="Error">*/
-    .Error{
-        height: 120px;
-        margin-top: 50px;
+    .Error { /* 設置Error類的樣式 */
+        height: 120px; /* 高度 */
+        margin-top: 50px; /* 向上移動50px */
     }
-    .Error h2{
-        font-size: 5vw;
+    .Error h2 { /* 設置Error內h2元素的樣式 */
+        font-size: 5vw; /* 字體大小 */
     }
-    .Error p{
-        font-size: 4vw;
+    .Error p { /* 設置Error內p元素的樣式 */
+        font-size: 4vw; /* 字體大小 */
     }
-    /*footer的內容*/
-    footer{
-        font-size: 14px;
+    .footer { /* 設置footer元素的樣式 */
+        width: 100%; /* 寬度 */
+        background-color: black; /* 背景顏色 */
+        text-align: center; /* 文字置中 */
+        padding: 20px; /* 內邊距 */
+        position: relative; /* 相對定位 */
     }
-    /*小載體的漢堡選單設定*/
-    .menu{
-        display: block;
-        background-color: transparent;
-        color: white;
-        font-size: 35px;
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        border: none;
-        cursor: pointer;
+    .menu { /* 設置menu類的樣式 */
+        display: block; /* 顯示 */
+        background-color: transparent; /* 背景顏色透明 */
+        color: white; /* 字體顏色 */
+        font-size: 35px; /* 字體大小 */
+        position: absolute; /* 絕對定位 */
+        top: 15px; /* 距離頂部15px */
+        right: 20px; /* 距離右邊20px */
+        border: none; /* 無邊框 */
+        cursor: pointer; /* 鼠標樣式 */
     }
-    /*更改*/
-    .nav menu{
-        display: none;
-        position: absolute;
-        top: 80px;
-        right: 0;
-        width: 100%;
-        background-color: rgb(0, 0, 0 ,0.9);
-        text-align: center;
-        flex-direction: column;
-        z-index: 9999;
+    .nav menu { /* 設置nav menu類的樣式 */
+        display: none; /* 不顯示 */
+        position: absolute; /* 絕對定位 */
+        top: 80px; /* 距離頂部80px */
+        right: 0; /* 距離右邊0 */
+        width: 100%; /* 寬度 */
+        background-color: rgb(0, 0, 0, 0.9); /* 背景顏色和透明度 */
+        text-align: center; /* 文字置中 */
+        flex-direction: column; /* 垂直佈局 */
+        z-index: 9999; /* 層級 */
     }
-    .nav-menu.active{
-        display: flex;/*點擊後顯示選單*/
+    .nav-menu.active { /* 設置nav-menu激活狀態的樣式 */
+        display: flex; /* 彈性佈局 */
     }
-    .nav-menu li{
-        margin: 10px 0;
+    .nav-menu li { /* 設置nav-menu內li元素的樣式 */
+        margin: 10px 0; /* 上下邊距10px */
     }
-
 }
