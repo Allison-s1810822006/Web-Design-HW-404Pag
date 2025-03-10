@@ -17,7 +17,7 @@ h1{ /* 設置h1元素的樣式 */
     position: absolute; /* 絕對定位 */
     top: 0; /* 距離頂部0 */
     line-height: 95px; /* 行高 */
-    background-image: url("imgs/logo.png"); /* 背景圖片 */
+    background-image: url("imgs/LOGO.png"); /* 背景圖片 */
     background-repeat: no-repeat; /* LOGO圖片不重複 */
     background-position: left center; /* LOGO圖片位置 */
     background-size:50% ; /* LOGO圖片縮小50% */
