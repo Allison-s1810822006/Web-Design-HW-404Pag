@@ -1,104 +1,128 @@
-*{
+*{ /* 全局選擇器，設置所有元素的內外邊距為0 */
     padding: 0;
     margin: 0;
 }
-header{
+body { /* 設置body元素的樣式 */
+    overflow-x: hidden; /* 隱藏水平滾動條 */
+}
+header {
     background-color: rgb(166, 166, 166 ,0.9);
     height: 80px;
-    width:100%;
-    position: fixed;
-
+    width: 100%;
+    position: fixed; /* 確保 header 固定在最上層 */
+    z-index: 1000; /* 設定比 .news 更高的圖層 */
 }
-h1{color: white;
-    position: absolute;
-    /*left: 120px;*/
-    top: 0;
-    line-height: 95px;
-    background-image: url("imgs/logo.png");
-    background-repeat: no-repeat;
-    background-position: left center;
-    /*縮小LOGO圖片50%*/
-    background-size:50% ;
-    left:60px;
-    width:450px;
-    text-indent: -9999px;
+h1{ /* 設置h1元素的樣式 */
+    color: white; /* 字體顏色 */
+    position: absolute; /* 絕對定位 */
+    top: 0; /* 距離頂部0 */
+    line-height: 95px; /* 行高 */
+    background-image: url("imgs/logo.png"); /* 背景圖片 */
+    background-repeat: no-repeat; /* LOGO圖片不重複 */
+    background-position: left center; /* LOGO圖片位置 */
+    background-size:50% ; /* LOGO圖片縮小50% */
+    left:60px; /* 距離左邊60px */
+    width:450px; /* 寬度 */
+    text-indent: -9999px; /* 隱藏原本打的one two studio文字 */
 }
-header ul{
-    position: absolute;
-    right: 5vw;
-    top: 0;
-    line-height: 80px;
+header ul{ /* 設置header內ul元素的樣式 */
+    position: absolute; /* 絕對定位 */
+    right: 5vw; /* 距離右邊5vw */
+    top: 0; /* 距離頂部0 */
+    line-height: 80px; /* 行高 */
 }
-header li{
-
-    display: inline;
-    margin-right: 4vw;}
-header a{
-    font-family: "Arial", sans-serif;
-    color: white;
-    text-decoration: none;}
-header a:hover{
-    text-decoration: underline;
+header li{ /* 設置header內li元素的樣式 */
+    display: inline; /* 行內顯示 */
+    margin-right: 4vw; /* 右邊距4vw */
 }
-/*main 第一個<section class="news">*/
-.news{
-    background-color: white;
-    color: #737373;
-    height: 80vh;
-    background-image: url("imgs/Cat.png");
-    background-repeat: no-repeat;
-    /*縮小貓咪圖片30%*/
-    background-size: 30%;
-    background-position: center;
-    width:1200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+header a{ /* 設置header內a元素的樣式 */
+    font-family: "Arial", sans-serif; /* 字體 */
+    color: white; /* 字體顏色 */
+    text-decoration: none; /* 去掉下劃線 */
 }
-/*main 第二個<section class="Error">*/
-.Error{
-    font-family: "Arial", sans-serif;
-    background-color: white;
-    color: #737373;
-    height: 250px;
-
+header a:hover{ /* 設置header內a元素的懸停樣式 */
+    text-decoration: underline; /* 讓使用者滑動時懸停時顯示下劃線 */
 }
-.Error h2{
-    font-family: "Arial", sans-serif;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-}
-.Error p{
-    font-family: "Arial", sans-serif;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    line-height: 1.5em;
-}
-footer
-{
-    font-family: "Arial", sans-serif;
-    background-color: black;
-    color: white;
-    height: 60px;
+.news {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
-    line-height: 1.5em;
+    height: 75vh;
+    position: relative; /* 避免影響 header 的層級 */
+    z-index: 10; /* 確保不超過 header */
 }
-.menu{
-    display: none;
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 10px;
+    width: 300px;
+    height: 200px;
+    z-index: 5; /* 確保低於 header */
 }
-/*響應式語法*/
+.cat { /* 設置cat類的樣式 */
+    width: 250px; /* 寬度 */
+    position: relative; /* 相對定位 */
+}
+.coffee {
+    width: 210px;  /* 確保咖啡杯的大小 */
+    height: auto; /* 保持原比例 */
+    max-width: 100px;
+    position: relative;
+    margin-left: -20px;
+    transition: transform 0.5s ease;
+}
+.container:hover .coffee { /* 設置container懸停時coffee類的樣式 */
+    transform: rotate(30deg) translateX(20px); /* 旋轉和水平移動 */
+}
+.Error{ /* 設置Error類的樣式 */
+    font-family: "Arial", sans-serif; /* 字體 */
+    background-color: white; /* 背景顏色 */
+    color: #737373; /* 字體顏色 */
+    height: 200px; /* 高度 */
+    margin-top: -100px; /* 向上移動 100px */
+}
+.Error h2{ /* 設置Error內h2元素的樣式 */
+    font-size: 3rem; /* 字體大小 */
+    display: flex; /* 彈性佈局 */
+    justify-content: center; /* 水平置中 */
+}
+.Error p{ /* 設置Error內p元素的樣式 */
+    font-size: 1.5rem; /* 字體大小 */
+    display: flex; /* 彈性佈局 */
+    justify-content: center; /* 水平置中 */
+    line-height: 1.5em; /* 行高 */
+}
+footer { /* 設置footer元素的樣式 */
+    font-family: "Arial", sans-serif; /* 字體 */
+    background-color: black; /* 背景顏色 */
+    color: white; /* 字體顏色 */
+    height: 60px; /* 高度 */
+    display: flex; /* 彈性佈局 */
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+    font-size: 14px; /* 字體大小 */
+    line-height: 1.5em; /* 行高 */
+    width: 100%; /* 寬度 */
+    text-align: center; /* 文字置中 */
+    padding: 20px; /* 內邊距 */
+    position: relative; /* 相對定位 */
+}
+.menu{ /* 設置menu類的樣式 */
+    display: none; /* 不顯示 */
+}
+/*響應式程式碼*/
 @media screen and (max-width: 800px){
-   .h1{
-       background-position: 80%center;
-         width: 100px;
-            right: 10px;
-   }
+    h1 {
+        background-size: contain; /* 確保 LOGO 完整顯示 */
+        background-position: center; /* 讓 LOGO 置中 */
+        width: 200px; /* 限制 LOGO 寬度 */
+        height: 50px; /* 限制 LOGO 高度 */
+        left: 10px; /* 避免跑出螢幕 */
+        text-indent: -9999px; /* 隱藏文字 */
+    }
     header ul{
         display: none;
         left: 50%;
@@ -108,18 +132,35 @@ footer
     .news{
         width: 150%;
         height: 50vh;
-        background-size: 35%;
-        /*讓貓咪圖片往左邊靠20% 往下面靠100%*/
-        background-position:20% 100% ;
-        /*width:700px;*/
-        display: flex;
+    }
+    .container{
+        width: 50%;
+        height: 30%;
+        left: -14%;
+        justify-content: center;
+    }
+    .cat{
+        width: 50%;
+        position: relative;
+    }
+    .coffee{
+        width: 20%;
+        height: auto;
+        max-width: 100px;
+        position: relative;
+        margin-left: -20px;
+        transition: transform 0.5s ease;
     }
     /*main 第二個<section class="Error">*/
+    .Error{
+        height: 120px;
+        margin-top: 50px;
+    }
     .Error h2{
-        font-size: 40px;
+        font-size: 5vw;
     }
     .Error p{
-        font-size: 16px;
+        font-size: 4vw;
     }
     /*footer的內容*/
     footer{
@@ -136,6 +177,24 @@ footer
         right: 20px;
         border: none;
         cursor: pointer;
+    }
+    /*更改*/
+    .nav menu{
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        background-color: rgb(0, 0, 0 ,0.9);
+        text-align: center;
+        flex-direction: column;
+        z-index: 9999;
+    }
+    .nav-menu.active{
+        display: flex;/*點擊後顯示選單*/
+    }
+    .nav-menu li{
+        margin: 10px 0;
     }
 
 }
