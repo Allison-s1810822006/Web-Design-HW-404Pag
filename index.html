@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <button class="menu">&#9776;</button>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One Two Studio</title>
@@ -9,14 +8,21 @@
 </head>
 
 <body>
+
 <header>
+    <button class="menu">&#9776;</button>
+
     <h1>One Two Studio</h1>
 <nav>
-<ul>
+<!--菜單按鈕-->
+<ul class="nav-menu">
     <li><a href="#">Home</a> </li>
-    <li><a href="#">Work</a> </li>
-    <li><a href="#">About</a> </li>
-    <li><a href="#">Q & A</a> </li>
+<!--    <li><a href="#"> |</a> </li>-->
+    <li><a href="#"> Work</a> </li>
+<!--    <li><a href="#"> |</a> </li>-->
+    <li><a href="#"> About</a> </li>
+<!--    <li><a href="#"> |</a> </li>-->
+    <li><a href="#"> Q & A</a> </li>
 </ul>
 </nav>
 </header>
@@ -35,5 +41,10 @@
 <footer>
     <p>Copyright &copy; 2025 One Two Studio</p>
 </footer>
+<script>
+    document.querySelector(".menu").addEventListener("click", function() {
+        document.querySelector(".nav-menu").classList.toggle("active");
+    });
+</script>
 </body>
 </html>
