@@ -2,7 +2,17 @@
     padding: 0;
     margin: 0;
 }
+main {
+    flex: 1;
+}
+
+html, body {
+    height: 100%;
+}
+
 body { /* 設置body元素的樣式 */
+    display: flex;
+    flex-direction: column;
     overflow-x: hidden; /* 隱藏水平滾動條 */
 }
 header { /* 設置header元素的樣式 */
@@ -24,6 +34,13 @@ h1 { /* 設置h1元素的樣式 */
     left: 60px; /* 距離左邊60px */
     width: 450px; /* 寬度 */
     text-indent: -9999px; /* 隱藏文字 */
+
+}
+h1 a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 header ul { /* 設置header內ul元素的樣式 */
     position: absolute; /* 絕對定位 */
@@ -35,13 +52,33 @@ header li { /* 設置header內li元素的樣式 */
     display: inline; /* 行內顯示 */
     margin-right: 4vw; /* 右邊距4vw */
 }
-header a { /* 設置header內a元素的樣式 */
-    font-family: "Arial", sans-serif; /* 字體 */
-    color: white; /* 字體顏色 */
-    text-decoration: none; /* 去掉下劃線 */
+header a {
+    font-family: "Arial", sans-serif;
+    color: white; /* 預設白色 */
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease-in-out;
 }
-header a:hover { /* 設置header內a元素的懸停樣式 */
-    text-decoration: underline; /* 懸停時顯示下劃線 */
+
+header a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #444; /* 底線改成深灰色 */
+    transition: width 0.3s ease-in-out;
+}
+
+header a:hover {
+    color: #444444; /* 深灰色文字 */
+}
+
+header a:hover::after {
+    width: 100%;
 }
 .news { /* 設置news類的樣式 */
     display: flex; /* 彈性佈局 */
@@ -76,17 +113,62 @@ header a:hover { /* 設置header內a元素的懸停樣式 */
 .container:hover .coffee { /* 設置container懸停時coffee類的樣式 */
     transform: rotate(30deg) translateX(20px); /* 旋轉和水平移動 */
 }
+/*home page */
+.Cloth {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* 改成固定比例 */
+    overflow: hidden;
+    z-index: 10;
+}
+
+.container-cloth {
+    width: 100%; /* ✅ -100% 是錯的，要寫正值 */
+    height: 100%;
+}
+
+.container-cloth img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.Slogn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+    background-color: white;
+    color: #737373;
+    height: 80px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.Slogn h2 { /* 設置Slogn內h2元素的樣式 */
+    font-size: 2.5rem; /* 字體大小 */
+    display: flex; /* 彈性佈局 */
+    justify-content: center; /* 水平置中 */
+    margin-top: -80px;
+}
 .Error { /* 設置Error類的樣式 */
     font-family: "Arial", sans-serif; /* 字體 */
     background-color: white; /* 背景顏色 */
     color: #737373; /* 字體顏色 */
     height: 200px; /* 高度 */
-    margin-top: -100px; /* 向上移動100px */
+    margin-top: -200px; /* 向上移動100px */
+    position: relative;
+    z-index: 20;
+
 }
 .Error h2 { /* 設置Error內h2元素的樣式 */
     font-size: 3rem; /* 字體大小 */
     display: flex; /* 彈性佈局 */
     justify-content: center; /* 水平置中 */
+    margin-top: 20px;
 }
 .Error p { /* 設置Error內p元素的樣式 */
     font-size: 1.5rem; /* 字體大小 */
@@ -94,21 +176,65 @@ header a:hover { /* 設置header內a元素的懸停樣式 */
     justify-content: center; /* 水平置中 */
     line-height: 1.5em; /* 行高 */
 }
-footer { /* 設置footer元素的樣式 */
-    font-family: "Arial", sans-serif; /* 字體 */
-    background-color: black; /* 背景顏色 */
-    color: white; /* 字體顏色 */
-    height: 60px; /* 高度 */
-    display: flex; /* 彈性佈局 */
-    justify-content: center; /* 水平置中 */
-    align-items: center; /* 垂直置中 */
-    font-size: 14px; /* 字體大小 */
-    line-height: 1.5em; /* 行高 */
-    width: 100%; /* 寬度 */
-    text-align: center; /* 文字置中 */
-    padding: 20px; /* 內邊距 */
-    position: relative; /* 相對定位 */
+
+.Error button {
+    display: block;
+    margin: 20px auto 0 auto; /* 上 20px，自動左右置中 */
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    background-color: rgb(114, 114, 114);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
 }
+
+.Error button:hover {
+    background-color: #0056b3;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.Error h2, .Error p {
+    animation: fadeInUp 0.8s ease both;
+}
+
+.Error p:nth-of-type(1) {
+    animation-delay: 0.3s;
+}
+
+.Error p:nth-of-type(2) {
+    animation-delay: 0.6s;
+}
+
+.Error p:nth-of-type(3) {
+    animation-delay: 0.9s;
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    line-height: 1.5em;
+    width: 100%;
+    text-align: center;
+}
+
 .menu { /* 設置menu類的樣式 */
     display: none; /* 不顯示 */
 }
@@ -189,8 +315,10 @@ footer { /* 設置footer元素的樣式 */
     }
     .nav-menu.active { /* 設置nav-menu激活狀態的樣式 */
         display: flex; /* 彈性佈局 */
+
     }
     .nav-menu li { /* 設置nav-menu內li元素的樣式 */
         margin: 10px 0; /* 上下邊距10px */
+
     }
 }
