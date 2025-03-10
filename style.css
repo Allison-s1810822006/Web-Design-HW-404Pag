@@ -2,9 +2,6 @@
     padding: 0;
     margin: 0;
 }
-body {
-    overflow-x: hidden;
-}
 header{
     background-color: rgb(166, 166, 166 ,0.9);
     height: 80px;
@@ -12,8 +9,7 @@ header{
     position: fixed;
 
 }
-h1{
-    color: white;
+h1{color: white;
     position: absolute;
     /*left: 120px;*/
     top: 0;
@@ -45,48 +41,20 @@ header a:hover{
     text-decoration: underline;
 }
 /*main 第一個<section class="news">*/
-.news {
+.news{
+    background-color: white;
+    color: #737373;
+    height: 80vh;
+    background-image: url("imgs/Cat.png");
+    background-repeat: no-repeat;
+    /*縮小貓咪圖片30%*/
+    background-size: 30%;
+    background-position: center;
+    width:1200px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 80vh; /* 確保有足夠高度 */
-    position: relative;
-}
-
-    /*background-image: url("imgs/Cat.png");*/
-    /*background-repeat: no-repeat;*/
-    /*!*縮小貓咪圖片30%*!*/
-    /*background-size: 25%;!* 原本30%，大小 *!*/
-    /*background-position: center;*/
-    /*width:100%;*/
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*align-items: center;*/
-    /*justify-content: center;*/
-.container {
-    position: relative; /* 改為相對定位，確保它仍在 .news 內 */
-    display: flex;
-    align-items: flex-end; /* 讓貓咪和咖啡杯底部對齊 */
     justify-content: center;
-    gap: 10px;
-    width: 300px;
-    height: 200px;
-}
-
-
-.Cat {
-    width: 150px;
-    position: relative;
-}
-.coffee {
-    width: 80px;
-    position: relative;
-    margin-left: -20px;
-    transition: transform 0.5s ease;
-}
-/* 讓咖啡杯在 hover 時擺動 */
-.container:hover .coffee {
-    transform: rotate(30deg) translateX(20px);
 }
 /*main 第二個<section class="Error">*/
 .Error{
@@ -98,13 +66,13 @@ header a:hover{
 }
 .Error h2{
     font-family: "Arial", sans-serif;
-    font-size: 3rem;/* 調整成 rem，適應不同螢幕 */
+    font-size: 30px;
     display: flex;
     justify-content: center;
 }
 .Error p{
     font-family: "Arial", sans-serif;
-    font-size: 1.5rem;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     line-height: 1.5em;
@@ -120,21 +88,17 @@ footer
     align-items: center;
     font-size: 14px;
     line-height: 1.5em;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    position: relative;
 }
 .menu{
     display: none;
 }
 /*響應式語法*/
 @media screen and (max-width: 800px){
-   /*h1{*/
-   /*    background-position: 80%center;*/
-   /*      width: 100px;*/
-   /*         right: 10px;*/
-   /*}*/
+   .h1{
+       background-position: 80%center;
+         width: 100px;
+            right: 10px;
+   }
     header ul{
         display: none;
         left: 50%;
@@ -144,8 +108,7 @@ footer
     .news{
         width: 150%;
         height: 50vh;
-        /* 貓咪圖片大小 */
-        background-size: 40%;/* 原本30%，太小 */
+        background-size: 35%;
         /*讓貓咪圖片往左邊靠20% 往下面靠100%*/
         background-position:20% 100% ;
         /*width:700px;*/
@@ -153,10 +116,10 @@ footer
     }
     /*main 第二個<section class="Error">*/
     .Error h2{
-        font-size: 5vw;
+        font-size: 40px;
     }
     .Error p{
-        font-size: 4vw;
+        font-size: 16px;
     }
     /*footer的內容*/
     footer{
@@ -173,24 +136,6 @@ footer
         right: 20px;
         border: none;
         cursor: pointer;
-    }
-    /*更改*/
-    .nav menu{
-        display: none;
-        position: absolute;
-        top: 80px;
-        right: 0;
-        width: 100%;
-        background-color: rgb(0, 0, 0 ,0.9);
-        text-align: center;
-        flex-direction: column;
-        z-index: 9999;
-    }
-    .nav-menu.active{
-        display: flex;/*點擊後顯示選單*/
-    }
-    .nav-menu li{
-        margin: 10px 0;
     }
 
 }
