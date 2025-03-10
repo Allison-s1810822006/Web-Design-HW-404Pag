@@ -1,54 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- 定義文件類型為 HTML5 -->
+<html lang="en"> <!-- 設置語言為英文 -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One Two Studio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8"> <!-- 設置字符編碼為 UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 設置視口，適應不同設備 -->
+    <title>One Two Studio</title> <!-- 設置網頁標題 -->
+    <link rel="stylesheet" href="style.css"> <!-- 連接外部樣式表 -->
 </head>
 
-<body>
+<body> <!-- 網頁主體開始 -->
 
-<header>
-    <button class="menu">&#9776;</button>
+<header> <!-- 頁首部分 -->
+    <button class="menu">&#9776;</button> <!-- 響應式的漢堡選單按鈕 -->
 
-    <h1>One Two Studio</h1>
-<nav>
-<!--菜單按鈕-->
-<ul class="nav-menu">
-    <li><a href="#">Home</a> </li>
-<!--    <li><a href="#"> |</a> </li>-->
-    <li><a href="#"> Work</a> </li>
-<!--    <li><a href="#"> |</a> </li>-->
-    <li><a href="#"> About</a> </li>
-<!--    <li><a href="#"> |</a> </li>-->
-    <li><a href="#"> Q & A</a> </li>
-</ul>
-</nav>
+    <h1>One Two Studio</h1> <!-- 網站標題 -->
+    <nav> <!-- 導航欄 -->
+        <ul class="nav-menu"> <!-- 導航菜單 -->
+            <li><a href="#">Home</a> </li> <!-- 首頁連結 -->
+            <li><a href="#"> Work</a> </li> <!-- 工作連結 -->
+            <li><a href="#"> About</a> </li> <!-- 關於連結 -->
+            <li><a href="#"> Q & A</a> </li> <!-- 問答連結 -->
+        </ul>
+    </nav>
 </header>
-<main>
-    <section class="news">
-        <div class="container">
-            <img src="imgs/Cat.png" alt="貓咪" class="Cat">
-            <img src="imgs/coffee.png" alt="咖啡杯" class="coffee">
+
+<main> <!-- 主內容區域 -->
+    <section class="news"> <!-- 新聞區域 -->
+        <div class="container"> <!-- 圖片容器 -->
+            <img src="imgs/Cat.png" alt="貓咪" class="cat"> <!-- 貓咪圖片 -->
+            <img src="imgs/coffee.png" alt="咖啡杯" class="coffee"> <!-- 咖啡杯圖片 -->
         </div>
     </section>
 
-    <section class="Error">
-        <h2>Error!</h2>
-        <p>Sorry, the page you are looking for is not available.</p>
-        <!--    連結回去首頁按鈕-->
-        <p>Click <a href="index.html">here</a> to go back to the home page.</p>
+    <section class="Error"> <!-- 錯誤信息區域 -->
+        <h2>Error!</h2> <!-- 錯誤標題 -->
+        <p>Something went wrong,Please try again later.</p> <!-- 錯誤信息 -->
+        <p>Click  <a href=" index.html " >here</a>  to go back to the home page.</p> <!-- 返回首頁連結 -->
     </section>
 
 </main>
+<!-- 頁尾部分 -->
 <footer>
-    <p>Copyright &copy; 2025 One Two Studio</p>
+    <p>Copyright &copy; 2025 One Two Studio</p> <!-- 版權信息 -->
 </footer>
+
 <script>
-    document.querySelector(".menu").addEventListener("click", function() {
-        document.querySelector(".nav-menu").classList.toggle("active");
+    document.querySelector(".menu").addEventListener("click", function() { <!-- 為漢堡選單按鈕添加點擊事件 -->
+        document.querySelector(".nav-menu").classList.toggle("active"); <!-- 切換導航菜單的顯示狀態 -->
     });
 </script>
+
 </body>
 </html>
