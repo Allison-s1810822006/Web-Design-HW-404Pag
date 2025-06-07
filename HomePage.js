@@ -9,6 +9,6 @@ const timer = setInterval(() => {
     countdownEl.textContent = seconds;
     if (seconds === 0) {
         clearInterval(timer);
-        window.location.href = "HomePage.html.html";
+        window.location.href = "HomePage.html";
     }
 }, 1000);
