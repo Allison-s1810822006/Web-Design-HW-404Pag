@@ -84,7 +84,7 @@ header a:hover::after {
     display: flex; /* 彈性佈局 */
     justify-content: center; /* 水平置中 */
     align-items: center; /* 垂直置中 */
-    height: 75vh; /* 高度 */
+    height: 85vh; /* 高度 */
     position: relative; /* 相對定位 */
     z-index: 10; /* 確保不超過header */
 }
@@ -97,13 +97,17 @@ header a:hover::after {
     width: 300px; /* 寬度 */
     height: 200px; /* 高度 */
     z-index: 5; /* 確保低於header */
+    /*margin-top: 40px;*/
+
 }
 .cat { /* 設置cat類的樣式 */
-    width: 250px; /* 寬度 */
+    margin-top: -10px;
+    width: 260px; /* 寬度 */
     position: relative; /* 相對定位 */
 }
 .coffee { /* 設置coffee類的樣式 */
-    width: 210px; /* 寬度 */
+    margin-top: -10px;
+    width: 220px; /* 寬度 */
     height: auto; /* 保持原比例 */
     max-width: 100px; /* 最大寬度 */
     position: relative; /* 相對定位 */
@@ -113,6 +117,12 @@ header a:hover::after {
 .container:hover .coffee { /* 設置container懸停時coffee類的樣式 */
     transform: rotate(30deg) translateX(20px); /* 旋轉和水平移動 */
 }
+
+html, body {
+    height: 100%;
+    min-height: 100vh;
+}
+
 /*home page */
 .Cloth {
     position: relative;
@@ -159,16 +169,18 @@ header a:hover::after {
     background-color: white; /* 背景顏色 */
     color: #737373; /* 字體顏色 */
     height: 200px; /* 高度 */
-    margin-top: -200px; /* 向上移動100px */
+    margin-top: -160px; /* 向上移動100px */
     position: relative;
     z-index: 20;
-
+    padding: 60px 20px;
+    text-align: center;
 }
 .Error h2 { /* 設置Error內h2元素的樣式 */
     font-size: 3rem; /* 字體大小 */
     display: flex; /* 彈性佈局 */
     justify-content: center; /* 水平置中 */
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 .Error p { /* 設置Error內p元素的樣式 */
     font-size: 1.5rem; /* 字體大小 */
@@ -225,7 +237,7 @@ header a:hover::after {
 footer {
     background-color: black;
     color: white;
-    height: 100px;
+    min-height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -233,6 +245,8 @@ footer {
     line-height: 1.5em;
     width: 100%;
     text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .menu { /* 設置menu類的樣式 */
@@ -253,18 +267,23 @@ footer {
         transform: translateX(-50%); /* 水平移動 */
     }
     .news { /* 設置news類的樣式 */
-        width: 150%; /* 寬度 */
+        width: 100%; /* 寬度 */
         height: 50vh; /* 高度 */
     }
     .container { /* 設置container類的樣式 */
-        width: 50%; /* 寬度 */
+        width: 90vw; /* 寬度 */
         height: 30%; /* 高度 */
-        left: -14%; /* 左邊距-14% */
+        max-width: 350px; /* 可視需要調整 */
+        left: 0; /* 左邊距-14% */
         justify-content: center; /* 水平置中 */
     }
     .cat { /* 設置cat類的樣式 */
         width: 50%; /* 寬度 */
         position: relative; /* 相對定位 */
+        max-width: 120px; /* 設定最大寬度 */
+        height: auto;
+        display: block;
+        margin: 0 auto;
     }
     .coffee { /* 設置coffee類的樣式 */
         width: 20%; /* 寬度 */
