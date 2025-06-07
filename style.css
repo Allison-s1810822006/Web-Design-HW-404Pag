@@ -192,7 +192,7 @@ header a:hover::after {
 }
 
 .Error button:hover {
-    background-color: #0056b3;
+    background-color: #8a8a8a;
 }
 @keyframes fadeInUp {
     0% {
