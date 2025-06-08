@@ -254,12 +254,14 @@ footer {
 }
 @media screen and (max-width: 800px) { /* 響應式設計，屏幕寬度小於800px時 */
     h1 { /* 設置h1元素的樣式 */
-        background-size: contain; /* 確保背景圖片完整顯示 */
-        background-position: center; /* 背景圖片置中 */
-        width: 200px; /* 寬度 */
-        height: 50px; /* 高度 */
-        left: 10px; /* 距離左邊10px */
-        text-indent: -9999px; /* 隱藏文字 */
+        position: relative;
+        left: 0;
+        margin: 0 auto;
+        width: 200px;
+        height: 50px;
+        background-size: contain;
+        background-position: center;
+        display: block;
     }
     header ul { /* 設置header內ul元素的樣式 */
         display: none; /* 不顯示 */
@@ -271,25 +273,25 @@ footer {
         height: 50vh; /* 高度 */
     }
     .container { /* 設置container類的樣式 */
-        width: 90vw; /* 寬度 */
-        height: 30%; /* 高度 */
-        max-width: 350px; /* 可視需要調整 */
-        left: 0; /* 左邊距-14% */
-        justify-content: center; /* 水平置中 */
+        width: 90vw;
+        height: 40vw;
+        max-width: 350px;
+        min-height: 180px;
+        justify-content: center;
     }
     .cat { /* 設置cat類的樣式 */
-        width: 50%; /* 寬度 */
-        position: relative; /* 相對定位 */
-        max-width: 120px; /* 設定最大寬度 */
+        width: 45vw;
+        max-width: 160px;
+        min-width: 80px;
         height: auto;
         display: block;
         margin: 0 auto;
     }
     .coffee { /* 設置coffee類的樣式 */
-        width: 20%; /* 寬度 */
-        height: auto; /* 保持原比例 */
-        max-width: 100px; /* 最大寬度 */
-        position: relative; /* 相對定位 */
+        width: 30vw;
+        max-width: 100px;
+        min-width: 50px;
+        height: auto;
         margin-left: -20px; /* 左邊距-20px */
         transition: transform 0.5s ease; /* 變換過渡效果 */
     }
@@ -332,12 +334,81 @@ footer {
         flex-direction: column; /* 垂直佈局 */
         z-index: 9999; /* 層級 */
     }
-    .nav-menu.active { /* 設置nav-menu激活狀態的樣式 */
-        display: flex; /* 彈性佈局 */
-
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        right: 0;
+        left: auto;
+        width: 100vw;
+        min-width: 180px;
+        max-width: 320px;
+        height: calc(100vh - 80px);
+        background: #fff;
+        box-shadow: -2px 2px 12px rgba(0,0,0,0.12);
+        flex-direction: column;
+        align-items: flex-end;
+        z-index: 9999;
+        display: none;
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+        overflow-y: auto;
     }
-    .nav-menu li { /* 設置nav-menu內li元素的樣式 */
-        margin: 10px 0; /* 上下邊距10px */
-
+    .nav-menu.active {
+        display: flex;
     }
+    .nav-menu li {
+        width: 100%;
+        text-align: right;
+        margin: 0;
+        padding: 16px 24px;
+        border-bottom: 1px solid #eee;
+    }
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+    .nav-menu a {
+        color: #737373 !important;
+        font-size: 1.1rem;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.2s;
+    }
+    .nav-menu a:hover {
+        color: #444 !important;
+    }
+}
+@media (max-width: 768px) {
+  .Cloth {
+    height: 40vh;
+  }
+  .container-cloth img {
+    height: 60%;
+  }
+  .Slogn h2 {
+    font-size: 1.3rem;
+    margin-top: -30px;
+  }
+}
+@media (max-width: 800px) {
+    .Cloth {
+        height: 60vh;
+        min-height: 250px;
+    }
+    .container-cloth img {
+        max-height: 100%;
+        height: auto;
+        width: 100%;
+    }
+}
+@media (max-width: 480px) {
+  .Cloth {
+    height: 45vh;
+    min-height: 180px;
+  }
+  .container-cloth img {
+    max-height: 100%;
+    height: auto;
+    width: 100%;
+  }
 }
