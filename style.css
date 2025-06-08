@@ -312,6 +312,13 @@ footer {
         padding: 20px; /* 內邊距 */
         position: relative; /* 相對定位 */
     }
+
+
+
+
+
+
+
     .menu { /* 設置menu類的樣式 */
         display: block; /* 顯示 */
         background-color: transparent; /* 背景顏色透明 */
@@ -411,4 +418,74 @@ footer {
     height: auto;
     width: 100%;
   }
+}
+
+/* 互動404區域動畫與樣式 */
+.interactive-area {
+    position: relative;
+    cursor: pointer;
+    outline: none;
+}
+.overlay-404 {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255,255,255,0.6); /* 透明度60% */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    border-radius: 16px;
+    animation: fadeInUp 1.5s;
+    transition: opacity 1s;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 8px 32px 0 rgba(60,60,60,0.18), 0 1.5px 8px 0 rgba(60,60,60,0.10); /* 淺陰影 */
+}
+.overlay-404.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 慢速搖晃咖啡杯動畫 */
+.coffee.shake {
+    animation: shake-cup 1.5s cubic-bezier(.36,.07,.19,.97) 1;
+}
+@keyframes shake-cup {
+    0% { transform: rotate(0); }
+    20% { transform: rotate(10deg); }
+    40% { transform: rotate(-8deg); }
+    60% { transform: rotate(8deg); }
+    80% { transform: rotate(-5deg); }
+    100% { transform: rotate(0); }
+}
+.retry-btn {
+    display: inline-block !important;
+    margin: 20px auto;
+    padding: 10px 32px;
+    font-size: 1.3rem;
+    background-color: #6c6c6c;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-align: center;
+    font-family: 'Noto Sans TC', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+.retry-btn:hover {
+    background-color: #5e5e5e;
 }
