@@ -40,4 +40,5 @@ overlay.addEventListener('mouseleave', function() {
 // Try Again按鈕可再次搖晃咖啡杯
 retryBtn.addEventListener('click', function(e) {
     e.stopPropagation();
+    window.location.href = 'HomePage.html';
 });
