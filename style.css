@@ -475,7 +475,7 @@ footer {
     margin: 20px auto;
     padding: 10px 32px;
     font-size: 1.3rem;
-    background-color: #6c6c6c;
+    background-color: #535353;
     color: #fff;
     border: none;
     border-radius: 20px;
@@ -487,5 +487,5 @@ footer {
     letter-spacing: 0.05em;
 }
 .retry-btn:hover {
-    background-color: #5e5e5e;
+    background-color: #959595;
 }
